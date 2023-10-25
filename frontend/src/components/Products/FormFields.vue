@@ -32,7 +32,7 @@
                 </label>
                 <input v-model="product.price"
                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    type="number" id="price" placeholder="Product Price" required>
+                    type="number" min="1" id="price" placeholder="Product Price" required>
             </div>
 
             <div class="mb-4">
