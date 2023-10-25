@@ -2,15 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Traits\HttpResponses;
+use Illuminate\Support\Facades\Log;
+use App\Services\ListCategoriesService;
 
 class ListCategoriesController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     */
-    public function __invoke(Request $request)
+    use HttpResponses;
+    public function __invoke(ListCategoriesService $listCategoriesService)
     {
-        //
+        try {
+            $result = $listCategoriesService->get();
+            return $this->handleResponse($result,'Categories Returned Successfully!');
+        } catch (\Throwable $e) {
+            Log::error($e->getMessage());
+            return $this->handleError(['Something went wrong!']);
+        }
     }
 }
