@@ -7,7 +7,7 @@
   <script>
   import Index from '../components/Layout/Index.vue';
   import FormFieldsVue from '../components/Products/FormFields.vue';
-  import axiosInstance from '../axiosInsatnce'
+  import axiosInstance from '../axiosInstance'
   export default {
       components:{
           Index,FormFieldsVue

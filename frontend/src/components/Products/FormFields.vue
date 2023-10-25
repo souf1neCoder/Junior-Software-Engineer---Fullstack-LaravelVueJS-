@@ -66,7 +66,7 @@
   </template>
   
   <script>
-  import axiosInstance from '../../axiosInsatnce'
+  import axiosInstance from '../../axiosInstance'
   export default {
     data() {
       return {
@@ -101,9 +101,7 @@
         })
       },
       handleImageUpload(event) {
-        this.product.image = event.target.files[0];
-        console.log(this.product.image)
-  
+        this.product.image = event.target.files[0];  
       },
       clearProduct() {
         this.product.name = '';

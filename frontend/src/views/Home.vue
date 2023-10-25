@@ -7,7 +7,7 @@
   <script>
   import Index from '../components/Layout/Index.vue';
   import List from '../components/Products/List.vue';
-  import axiosInstance from '../axiosInsatnce'
+  import axiosInstance from '../axiosInstance'
   export default {
       components:{
           Index,List
