@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h3 align="center">>YouCan Challenge (Junior-Software-Engineer---Fullstack-LaravelVueJS-)</h3>
+  <h3 align="center">YouCan Challenge (Junior-Software-Engineer---Fullstack-LaravelVueJS-)</h3>
 
   <p align="center">
     A simple product management system;
@@ -76,7 +76,7 @@ npm run dev
 Route:list
 Endpoint | Description
 ----------|------------
-POST /products | Create a products
+POST /products | Create a product
 GET /products/{categoryID?}  | Get a listing of products
 GET /category  | Get a listing of categories
 
