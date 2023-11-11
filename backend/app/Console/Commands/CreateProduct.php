@@ -2,9 +2,9 @@
 
 namespace App\Console\Commands;
 
+use App\Repositories\ProductsRepository;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Log;
-use App\Repositories\ProductsRepository;
 
 class CreateProduct extends Command
 {
@@ -34,14 +34,13 @@ class CreateProduct extends Command
             $imagePath = $this->option('image');
             $categoryIds = $this->argument('categories');
             $data = [
-                'name'=>$name,
-                'description'=>$description,
-                'price'=>$price,
-                'image'=>$imagePath,
-                'categories'=>$categoryIds
+                'name' => $name,
+                'description' => $description,
+                'price' => $price,
+                'image' => $imagePath,
+                'categories' => $categoryIds,
             ];
             $product = $productsRepository->store($data);
-
 
             $this->info("Product created successfully ($product->name, $product->description, $product->price)");
         } catch (\Throwable $th) {

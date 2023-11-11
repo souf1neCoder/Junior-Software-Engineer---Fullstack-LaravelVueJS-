@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\Category;
 use Illuminate\Database\Seeder;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class CategorySeeder extends Seeder
 {
@@ -19,7 +18,7 @@ class CategorySeeder extends Seeder
             ['name' => 'Laptops', 'parent_id' => 1],
             ['name' => 'Smartphones', 'parent_id' => 1],
             ['name' => 'Men\'s Clothing', 'parent_id' => 2],
-            ['name' => 'Women\'s Clothing', 'parent_id' => 2]
+            ['name' => 'Women\'s Clothing', 'parent_id' => 2],
         ];
 
         Category::insert($categories);

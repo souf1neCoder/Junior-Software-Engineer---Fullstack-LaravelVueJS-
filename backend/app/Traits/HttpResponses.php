@@ -2,20 +2,26 @@
 
 namespace App\Traits;
 
-trait HttpResponses{
-    public function handleResponse( $result = null ,$msg = '',$status= 200){
+trait HttpResponses
+{
+    public function handleResponse($result = null, $msg = '', $status = 200)
+    {
         $res = [
-            'success'=>true,
-            'data'=>$result,
-            'message'=>$msg
+            'success' => true,
+            'data' => $result,
+            'message' => $msg,
         ];
-        return  response()->json($res, $status);
+
+        return response()->json($res, $status);
     }
-    public function handleError($errors = []){
+
+    public function handleError($errors = [])
+    {
         $res = [
-            'success'=>false,
-            'message'=>$errors
+            'success' => false,
+            'message' => $errors,
         ];
+
         return response()->json($res);
     }
 }

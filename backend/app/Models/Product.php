@@ -11,9 +11,10 @@ class Product extends Model
 {
     use HasFactory,HasUuids;
 
-    protected $fillable = ['name','description','price','image'];
+    protected $fillable = ['name', 'description', 'price', 'image'];
 
-    public function categories() : BelongsToMany{
+    public function categories(): BelongsToMany
+    {
         return $this->belongsToMany(Category::class)->withTimestamps();
     }
 }

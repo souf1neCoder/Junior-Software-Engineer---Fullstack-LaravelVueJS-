@@ -8,7 +8,8 @@ use Tests\TestCase;
 
 class ProductCreationTest extends TestCase
 {
-    use WithFaker,RefreshDatabase;
+    use RefreshDatabase,WithFaker;
+
     /**
      * A basic feature test example.
      */
@@ -18,7 +19,7 @@ class ProductCreationTest extends TestCase
             'name' => $this->faker->name,
             'description' => $this->faker->paragraph,
             'price' => $this->faker->randomFloat(2, 10, 100),
-            'categories'=>[1,3],
+            'categories' => [1, 3],
         ];
 
         $response = $this->post('/api/products', $data);

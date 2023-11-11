@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\Category;
 use App\Models\Product;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class ProductSeeder extends Seeder
@@ -15,7 +14,7 @@ class ProductSeeder extends Seeder
     public function run(): void
     {
         $categories = Category::all()->pluck('id');
-        Product::factory(10)->create()->each(function($product) use($categories){
+        Product::factory(10)->create()->each(function ($product) use ($categories) {
             $product->categories()->attach($categories->random());
         });
     }
